@@ -8,11 +8,11 @@ const app = express();
 // Basic Configuration
 const port = process.env.PORT || 3000;
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology:true});
-console.log(mongoose.connection.readyState);
-const urlSchmea = new mongoose.Schema({ 
+// console.log(mongoose.connection.readyState);
+const urlschema = new mongoose.Schema({ 
   url: {type: String},
 });
-let UrlModel = mongoose.model('urls', urlSchmea);
+let UrlModel = mongoose.model('urls', urlschema);
 
 app.use(cors());
 
